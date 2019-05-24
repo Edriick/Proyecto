@@ -75,6 +75,14 @@ public class PolizaFacadeREST extends AbstractFacade<Poliza> {
         super.edit(poliza);
  
     }
+    @GET
+    @Path("{id}")
+    @Produces({"application/xml", "application/json"})
+    public String Prueba(@PathParam("id") Integer id) {
+        TipoestadoFacadeREST tipoEstadoFacadeRest = new TipoestadoFacadeREST();  
+        String GetDescripcion = tipoEstadoFacadeRest.GetDescripcion(id);        
+        return GetDescripcion;
+    }
 
     @DELETE
     @Path("{id}")
