@@ -80,7 +80,8 @@ public class PolizaFacadeREST extends AbstractFacade<Poliza> {
     @Produces({"application/xml", "application/json"})
     public String Prueba(@PathParam("id") Integer id) {
         TipoestadoFacadeREST tipoEstadoFacadeRest = new TipoestadoFacadeREST();  
-        String GetDescripcion = tipoEstadoFacadeRest.GetDescripcion(id);        
+        String GetDescripcion = tipoEstadoFacadeRest.GetDescripcion(id);  
+        
         return GetDescripcion;
     }
 
